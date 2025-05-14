@@ -4,7 +4,7 @@
 ---
 
 ### AIM  
-To write a Python program to convert a given Infix expression to Postfix expression by following the precedence and associative rules. The input expression contains only Division, Subtraction, and Bitwise AND operators. A dictionary is used to set the priority for operators, and a set is used to hold the operators used in the given expression.
+To Write a Python program to convert given Infix expression to Postfix expression by following the precedence and associative rule.  The input expression contains only  Modulo, Multiplication and Bitwise OR . Use dictionary to set the priority for operators. Use set to hold the operators used in the given expression.
 
 ---
 
@@ -30,11 +30,36 @@ To write a Python program to convert a given Infix expression to Postfix express
 ### PROGRAM
 
 ```
-
+Operators = set(['%','*','|','(',')'])  
+Priority = {'*':2,'%':2,'|':1}
+def infixToPostfix(expression):
+    stack = [] 
+    output = '' 
+    for character in expression:
+        if character not in Operators:
+            output += character
+        elif character == '(':
+            stack.extend('(')
+        elif character == ')':
+            while stack and stack[-1] != '(':
+                output += stack.pop()
+            stack.pop()
+        else:
+            while stack and stack[-1] !='(' and Priority[character] <= Priority[stack[-1]]:
+                output += stack.pop()
+            stack.append(character)
+            
+    while stack:
+        output += stack.pop()
+    return output
+expression = input()
+print("infix notation: ",expression)
+print("postfix notation: ",infixToPostfix(expression))
 ```
 
 ### OUTPUT
 
+![image](https://github.com/user-attachments/assets/b8f040b3-c6cb-49a6-bcc5-5ebfb78f175d)
 
 ### RESULT
-
+Thua the Python program to convert given Infix expression to Postfix expression by following the precedence and associative rule was implemented and executed successfully.

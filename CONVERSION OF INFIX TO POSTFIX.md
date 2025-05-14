@@ -60,7 +60,7 @@ print("postfix notation: ",infixToPostfix(expression))
 
 ### OUTPUT
 
-![image](https://github.com/user-attachments/assets/4aa61e6b-b40b-49f4-902a-be3e2752d4ac)
+![image](https://github.com/user-attachments/assets/b7918031-72ef-487b-b97a-39bbdc3ec08b)
 
 ### RESULT
 Thus the Python program to convert given Infix expression to Postfix expression by following the precedence and associative rule was implemented and executed successfully.

@@ -27,5 +27,23 @@ To write a Python program to implement a stack using a list and its built-in met
 ### PROGRAM
 
 ```
+# Reg.No: 212223060220
+# Name: Rakshitha M
+stack = []
+stack.append(input())
+stack.append(input())
+stack.append(input())
+print("Stack before elements are popped")
+print(stack)
+stack.pop()
+stack.pop()
+stack.pop()
+print("\nStack after elements are popped:")
+print(stack)
 
 ```
+### OUTPUT
+![image](https://github.com/user-attachments/assets/a5db8f7c-bb6b-46a3-8f8d-001a06f6cdaf)
+
+### RESULT
+Successfully implemented a stack using Python list. Items were added using append() and removed using pop(), demonstrating LIFO (Last In First Out) behavior of stack.
